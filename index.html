@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>behrad | طراحی سایت و لینک‌پیج</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.8;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .profile-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-top: 50px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+        
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: white;
+        }
+        
+        h1 {
+            color: #667eea;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .section h2 {
+            color: #667eea;
+            font-size: 24px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .service-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-right: 4px solid #667eea;
+        }
+        
+        .service-item h3 {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .service-item p {
+            color: #666;
+            font-size: 16px;
+        }
+        
+        .price {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        
+        .portfolio-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .portfolio-item h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .portfolio-link {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+        
+        .portfolio-link:hover {
+            background: #764ba2;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .contact-btn {
+            display: block;
+            background: #667eea;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+        
+        .contact-btn:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .contact-btn.telegram {
+            background: #0088cc;
+        }
+        
+        .contact-btn.whatsapp {
+            background: #25d366;
+        }
+        
+        .contact-btn.instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .profile-section {
+                padding: 30px 20px;
+                margin-top: 20px;
+            }
+            
+            h1 {
+                font-size: 26px;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- بخش معرفی -->
+        <div class="profile-section">
+            <div class="profile-image">
+                👨‍💻
+            </div>
+            <h1>behrad</h1>
+            <p class="subtitle">طراح سایت و لینک‌پیج حرفه‌ای</p>
+            <p>طراحی سایت‌های زیبا، سریع و ریسپانسیو برای کسب‌وکارهای کوچک و بزرگ</p>
+        </div>
+        
+        <!-- بخش خدمات -->
+        <div class="section">
+            <h2>خدمات من</h2>
+            
+            <div class="service-item">
+                <h3>طراحی لینک‌پیج</h3>
+                <p>یک صفحه زیبا با تمام لینک‌های شما (تلگرام، اینستاگرام، واتساپ و...) مناسب برای بیو اینستاگرام</p>
+                <p class="price">از ۳۰۰ هزار تومان</p>
+            </div>
+            
+            <div class="service-item">
+                <h3>طراحی منوی دیجیتال رستوران</h3>
+                <p>منوی آنلاین با عکس غذاها و قیمت‌ها، قابل به‌روزرسانی با اسکن کیوآر کد</p>
+                <p class="price">از ۵۰۰ هزار تومان</p>
+            </div>
+            
+            <div class="service-item">
+                <h3>طراحی سایت شرکتی</h3>
+                <p>سایت معرفی خدمات و محصولات شما با طراحی حرفه‌ای و ریسپانسیو</p>
+                <p class="price">از ۱ میلیون تومان</p>
+            </div>
+        </div>
+        
+        <!-- بخش نمونه کارها -->
+        <div class="section">
+            <h2>نمونه کارها</h2>
+            
+            <div class="portfolio-item">
+                <h3>لینک‌پیج مدرس زبان</h3>
+                <p>طراحی لینک‌پیج برای مدرس زبان انگلیسی با لینک‌های شبکه‌های اجتماعی</p>
+               <!--<a href="#" class="portfolio-link">مشاهده نمونه</a>--> 
+            </div>
+            
+            <div class="portfolio-item">
+                <h3>منوی دیجیتال کافه</h3>
+                <p>طراحی منوی آنلاین برای کافه با عکس نوشیدنی‌ها و قیمت‌ها</p>
+              <!--<a href="#" class="portfolio-link">مشاهده نمونه</a>-->  
+            </div>
+            
+            <div class="portfolio-item">
+                <h3>سایت شرکتی</h3>
+                <p>طراحی سایت معرفی خدمات برای یک شرکت خدماتی</p>
+<!----               <a href="#" class="portfolio-link">مشاهده نمونه</a>-->
+            </div>
+        </div>
+        
+        <!-- بخش تماس -->
+        <div class="section">
+            <h2>تماس با من</h2>
+            <p>برای سفارش یا مشاوره رایگان، از طریق راه‌های زیر با من در ارتباط باشید:</p>
+            
+            <div class="contact-buttons">
+                <a href="https://web.rubika.ir/#c=c0EBRAv0a1efd5d31f956941ab629815" class="contact-btn telegram">
+                    📨 کانال روبیکا
+                </a>
+                <a href="https://ble.ir/join/7XUSurHqYQ" class="contact-btn whatsapp">
+                    📱 کانال بله
+                </a>
+                <a href="https://web.bale.ai/profile?uid=203564162" class="contact-btn instagram">
+                    📱 بله
+                </a>
+                <a href="tel:09944233605" class="contact-btn">
+                    📞 تماس تلفنی
+                </a>
+            </div>
+        </div>
+        
+        <!-- فوتر -->
+        <div class="footer">
+            <p>طراحی شده با ❤️ توسط بهراد</p>
+            <p>تمامی حقوق محفوظ است © ۲۰۲۶</p>
+        </div>
+    </div>
+</body>
+</html>
