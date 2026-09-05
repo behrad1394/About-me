@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://behrad1394.github.io/About-me/sitemap.xml
