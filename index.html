@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="google-site-verification" content="-QAZ-M3zLIk51hxANLDcKDfnluKWZcDOm8fiwV4qtg4" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>behrad | طراحی سایت و لینک‌پیج</title>
+    
+    <!-- SEO بهینه -->
+    <title>بهراد | طراح سایت و لینک‌پیج حرفه‌ای | طراحی منوی دیجیتال رستوران</title>
+    <meta name="description" content="طراحی سایت، لینک‌پیج اینستاگرام و منوی دیجیتال رستوران با قیمت مناسب. طراحی حرفه‌ای، سریع و ریسپانسیو. مشاوره رایگان.">
+    <meta name="keywords" content="طراح سایت, طراحی لینک‌پیج, منوی دیجیتال, طراحی سایت ارزان, لینک‌پیج اینستاگرام, منوی رستوران, QR Code, بهراد">
+    
     <style>
         * {
             margin: 0;
@@ -13,164 +18,394 @@
         }
         
         body {
-            font-family: Tahoma, Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
             color: #333;
             line-height: 1.8;
         }
         
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
         }
         
+        /* انیمیشن‌ها */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
         .profile-section {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 30px;
+            padding: 60px 50px;
             margin-top: 50px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            box-shadow: 0 25px 80px rgba(0,0,0,0.3);
             text-align: center;
+            animation: fadeIn 1s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .profile-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f09433, #00a8ff);
         }
         
         .profile-image {
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            margin: 0 auto 20px;
+            margin: 0 auto 30px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 60px;
-            color: white;
+            font-size: 80px;
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+            animation: float 3s ease-in-out infinite;
+            border: 5px solid white;
         }
         
         h1 {
             color: #667eea;
-            font-size: 32px;
-            margin-bottom: 10px;
+            font-size: 42px;
+            margin-bottom: 15px;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
         
         .subtitle {
+            color: #764ba2;
+            font-size: 22px;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+        
+        .description {
             color: #666;
             font-size: 18px;
-            margin-bottom: 30px;
+            line-height: 2.2;
+            margin-bottom: 35px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .section {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            margin-top: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 25px;
+            padding: 45px;
+            margin-top: 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            animation: fadeIn 1s ease;
         }
         
         .section h2 {
             color: #667eea;
-            font-size: 24px;
-            margin-bottom: 20px;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 10px;
+            font-size: 32px;
+            margin-bottom: 35px;
+            border-bottom: 4px solid #667eea;
+            padding-bottom: 15px;
+            display: inline-block;
+            position: relative;
+        }
+        
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
         }
         
         .service-item {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 30px;
+            border-radius: 20px;
+            border-right: 6px solid #667eea;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-item:hover {
+            transform: translateY(-10px) translateX(-5px);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+        }
+        
+        .service-icon {
+            font-size: 50px;
             margin-bottom: 15px;
-            border-right: 4px solid #667eea;
+            display: block;
         }
         
         .service-item h3 {
             color: #333;
-            font-size: 20px;
-            margin-bottom: 10px;
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 700;
         }
         
         .service-item p {
             color: #666;
             font-size: 16px;
-        }
-        
-        .price {
-            color: #667eea;
-            font-weight: bold;
-            font-size: 18px;
-            margin-top: 10px;
-        }
-        
-        .portfolio-item {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
+            line-height: 2;
             margin-bottom: 15px;
         }
         
-        .portfolio-item h3 {
+        .price {
+            color: white;
+            font-weight: 700;
+            font-size: 20px;
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 10px 25px;
+            border-radius: 25px;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .feature-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px 20px;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
+        }
+        
+        .feature-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .feature-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .feature-desc {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+        
+        .portfolio-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 30px;
+            border-radius: 20px;
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+        }
+        
+        .portfolio-card:hover {
+            transform: translateY(-8px);
+            border-color: #667eea;
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.2);
+        }
+        
+        .portfolio-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .portfolio-card h3 {
             color: #333;
-            margin-bottom: 10px;
+            font-size: 22px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .portfolio-card p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.9;
+            margin-bottom: 20px;
         }
         
         .portfolio-link {
             display: inline-block;
-            background: #667eea;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 8px 20px;
-            border-radius: 5px;
+            padding: 12px 30px;
+            border-radius: 25px;
             text-decoration: none;
-            margin-top: 10px;
-            transition: background 0.3s;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
         }
         
         .portfolio-link:hover {
-            background: #764ba2;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
         }
         
-        .contact-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .contact-btn {
-            display: block;
-            background: #667eea;
+        .contact-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 15px;
-            border-radius: 10px;
-            text-decoration: none;
+        }
+        
+        .contact-section h2 {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.5);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .contact-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            border-radius: 15px;
             text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+        
+        .contact-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .contact-title {
             font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .contact-link {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-top: 10px;
+            font-weight: 700;
             transition: all 0.3s;
         }
         
-        .contact-btn:hover {
-            background: #764ba2;
-            transform: translateY(-2px);
+        .contact-link:hover {
+            transform: scale(1.05);
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         
-        .contact-btn.telegram {
-            background: #0088cc;
+        .why-me-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
         }
         
-        .contact-btn.whatsapp {
-            background: #25d366;
+        .why-me-item {
+            display: flex;
+            align-items: start;
+            gap: 15px;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            transition: all 0.3s;
         }
         
-        .contact-btn.instagram {
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        .why-me-item:hover {
+            transform: translateX(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .why-me-icon {
+            font-size: 35px;
+            flex-shrink: 0;
+        }
+        
+        .why-me-content h4 {
+            color: #667eea;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+        
+        .why-me-content p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.8;
         }
         
         .footer {
             text-align: center;
             color: white;
-            margin-top: 40px;
-            padding: 20px;
-            font-size: 14px;
+            margin-top: 50px;
+            padding: 40px;
+            font-size: 16px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-right: 10px;
+            vertical-align: middle;
         }
         
         @media (max-width: 768px) {
@@ -179,16 +414,22 @@
             }
             
             .profile-section {
-                padding: 30px 20px;
+                padding: 40px 25px;
                 margin-top: 20px;
             }
             
             h1 {
-                font-size: 26px;
+                font-size: 32px;
             }
             
             .section {
-                padding: 20px;
+                padding: 30px 20px;
+            }
+            
+            .service-grid,
+            .portfolio-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -197,88 +438,217 @@
     <div class="container">
         <!-- بخش معرفی -->
         <div class="profile-section">
-            <div class="profile-image">
-                👨‍💻
-            </div>
+            <div class="profile-image">👨‍💻</div>
             <h1>behrad</h1>
             <p class="subtitle">طراح سایت و لینک‌پیج حرفه‌ای</p>
-            <p>طراحی سایت‌های زیبا، سریع و ریسپانسیو برای کسب‌وکارهای کوچک و بزرگ</p>
+            <p class="description">
+                من <strong>طراح سایت</strong> هستم و به کسب‌وکارهای کوچک کمک می‌کنم 
+                حضور آنلاین حرفه‌ای داشته باشند. تخصص من 
+                <strong>طراحی لینک‌پیج اینستاگرام</strong> و 
+                <strong>منوی دیجیتال رستوران</strong> است. 
+                سایت‌های سریع، زیبا و ریسپانسیو طراحی می‌کنم.
+            </p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">⚡</span>
+                    <div class="feature-title">تحویل سریع</div>
+                    <div class="feature-desc">۲۴ تا ۴۸ ساعته</div>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">💖</span>
+                    <div class="feature-title">طراحی زیبا</div>
+                    <div class="feature-desc">مدرن و حرفه‌ای</div>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📱</span>
+                    <div class="feature-title">کاملاً ریسپانسیو</div>
+                    <div class="feature-desc">موبایل و دسکتاپ</div>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">💰</span>
+                    <div class="feature-title">قیمت مناسب</div>
+                    <div class="feature-desc">کیفیت عالی</div>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🔧</span>
+                    <div class="feature-title">پشتیبانی</div>
+                    <div class="feature-desc">رایگان و دائمی</div>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🔍</span>
+                    <div class="feature-title">سئو بهینه</div>
+                    <div class="feature-desc">قابل ایندکس</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- بخش چرا من -->
+        <div class="section">
+            <h2> چرا من؟</h2>
+            <div class="why-me-grid">
+                <div class="why-me-item">
+                    <span class="why-me-icon">✅</span>
+                    <div class="why-me-content">
+                        <h4>تجربه و تخصص</h4>
+                        <p> تجربه بالا در طراحی سایت‌های حرفه‌ای و ریسپانسیو</p>
+                    </div>
+                </div>
+                <div class="why-me-item">
+                    <span class="why-me-icon">💵</span>
+                    <div class="why-me-content">
+                        <h4>قیمت منصفانه</h4>
+                        <p>کیفیت بالا با قیمت مناسب و رقابتی نسبت به بازار</p>
+                    </div>
+                </div>
+                <div class="why-me-item">
+                    <span class="why-me-icon">⏰</span>
+                    <div class="why-me-content">
+                        <h4>تحویل به موقع</h4>
+                        <p>تعهد به زمان‌بندی و تحویل پروژه در موعد مقرر</p>
+                    </div>
+                </div>
+                <div class="why-me-item">
+                    <span class="why-me-icon">🎧</span>
+                    <div class="why-me-content">
+                        <h4>پشتیبانی دائمی</h4>
+                        <p>پشتیبانی رایگان حتی بعد از تحویل پروژه</p>
+                    </div>
+                </div>
+                <div class="why-me-item">
+                    <span class="why-me-icon">🎯</span>
+                    <div class="why-me-content">
+                        <h4>طراحی سفارشی</h4>
+                        <p>طراحی منحصر به فرد بر اساس سلیقه و نیاز شما</p>
+                    </div>
+                </div>
+                <div class="why-me-item">
+                    <span class="why-me-icon">💬</span>
+                    <div class="why-me-content">
+                        <h4>مشاوره رایگان</h4>
+                        <p>مشاوره کامل قبل از شروع پروژه بدون هیچ هزینه‌ای</p>
+                    </div>
+                </div>
+            </div>
         </div>
         
         <!-- بخش خدمات -->
         <div class="section">
-            <h2>خدمات من</h2>
-            
-            <div class="service-item">
-                <h3>طراحی لینک‌پیج</h3>
-                <p>یک صفحه زیبا با تمام لینک‌های شما (تلگرام، اینستاگرام، واتساپ و...) مناسب برای بیو اینستاگرام</p>
-                <p class="price">از ۳۰۰ هزار تومان</p>
-            </div>
-            
-            <div class="service-item">
-                <h3>طراحی منوی دیجیتال رستوران</h3>
-                <p>منوی آنلاین با عکس غذاها و قیمت‌ها، قابل به‌روزرسانی با اسکن کیوآر کد</p>
-                <p class="price">از ۵۰۰ هزار تومان</p>
-            </div>
-            
-            <div class="service-item">
-                <h3>طراحی سایت شرکتی</h3>
-                <p>سایت معرفی خدمات و محصولات شما با طراحی حرفه‌ای و ریسپانسیو</p>
-                <p class="price">از ۱ میلیون تومان</p>
+            <h2>🎯 خدمات من</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <span class="service-icon">🔗</span>
+                    <h3>طراحی لینک‌پیج اینستاگرام</h3>
+                    <p>یک صفحه زیبا با تمام لینک‌های شما (روبیکا، بله، اینستاگرام و...) مناسب برای بیو اینستاگرام. طراحی حرفه‌ای و ریسپانسیو.</p>
+                    <span class="price">از ۳۰۰ هزار تومان</span>
+                </div>
+                
+                <div class="service-item">
+                    <span class="service-icon">🍔</span>
+                    <h3>طراحی منوی دیجیتال رستوران</h3>
+                    <p>منوی آنلاین با کیوآر کد (QR Code) برای رستوران‌ها و کافه‌ها. بدون هزینه چاپ، به‌روزرسانی آسان، نمایش عکس غذاها.</p>
+                    <span class="price">از ۵۰۰ هزار تومان</span>
+                </div>
+                
+                <div class="service-item">
+                    <span class="service-icon">🏢</span>
+                    <h3>طراحی سایت شرکتی</h3>
+                    <p>سایت معرفی خدمات و محصولات با طراحی حرفه‌ای و ریسپانسیو. مناسب برای کسب‌وکارهای کوچک و بزرگ.</p>
+                    <span class="price">از ۱ میلیون تومان</span>
+                </div>
+                
+                <div class="service-item">
+                    <span class="service-icon">📝</span>
+                    <h3>طراحی رزومه آنلاین</h3>
+                    <p>رزومه دیجیتال حرفه‌ای برای معرفی مهارت‌ها و سوابق کاری شما به کارفرمایان.</p>
+                    <span class="price">از ۲۵۰ هزار تومان</span>
+                </div>
             </div>
         </div>
         
         <!-- بخش نمونه کارها -->
         <div class="section">
-            <h2>نمونه کارها</h2>
-            
-            <div class="portfolio-item">
-                <h3>لینک‌پیج مدرس زبان</h3>
-                <p>طراحی لینک‌پیج برای مدرس زبان انگلیسی با لینک‌های شبکه‌های اجتماعی</p>
-               <!--<a href="#" class="portfolio-link">مشاهده نمونه</a>--> 
-            </div>
-            
-            <div class="portfolio-item">
-                <h3>منوی دیجیتال کافه</h3>
-                <p>طراحی منوی آنلاین برای کافه با عکس نوشیدنی‌ها و قیمت‌ها</p>
-              <!--<a href="#" class="portfolio-link">مشاهده نمونه</a>-->  
-            </div>
-            
-            <div class="portfolio-item">
-                <h3>سایت شرکتی</h3>
-                <p>طراحی سایت معرفی خدمات برای یک شرکت خدماتی</p>
-<!----               <a href="#" class="portfolio-link">مشاهده نمونه</a>-->
+            <h2>💼 نمونه کارها</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <span class="portfolio-icon">🔗</span>
+                    <h3>لینک‌پیج مدرس زبان <span class="badge">جدید</span></h3>
+                    <p>طراحی لینک‌پیج حرفه‌ای برای مدرس زبان انگلیسی با لینک‌های شبکه‌های اجتماعی و فرم تماس</p>
+   
+                </div>
+                
+                <div class="portfolio-card">
+                    <span class="portfolio-icon">🍔</span>
+                    <h3>منوی دیجیتال کافه <span class="badge">محبوب</span></h3>
+                    <p>طراحی منوی آنلاین برای کافه با عکس نوشیدنی‌ها، قیمت‌ها و کیوآر کد</p>
+                    
+                </div>
+                
+                <div class="portfolio-card">
+                    <span class="portfolio-icon">🏪</span>
+                    <h3>سایت شرکتی</h3>
+                    <p>طراحی سایت معرفی خدمات برای یک شرکت خدماتی با طراحی مدرن</p>
+                
+                </div>
+                
+                <div class="portfolio-card">
+                    <span class="portfolio-icon">📱</span>
+                    <h3>رزومه آنلاین</h3>
+                    <p>رزومه دیجیتال حرفه‌ای برای یک برنامه‌نویس با طراحی خلاقانه</p>
+                 
+                </div>
             </div>
         </div>
         
         <!-- بخش تماس -->
-        <div class="section">
-            <h2>تماس با من</h2>
-            <p>برای سفارش یا مشاوره رایگان، از طریق راه‌های زیر با من در ارتباط باشید:</p>
+        <div class="section contact-section">
+            <h2> راه‌های ارتباطی</h2>
+            <p style="text-align: center; margin-bottom: 20px; font-size: 18px;">برای سفارش یا مشاوره رایگان، از طریق راه‌های زیر با من در ارتباط باشید:</p>
             
-            <div class="contact-buttons">
-                <a href="https://web.rubika.ir/#c=c0EBRAv0a1efd5d31f956941ab629815" class="contact-btn telegram">
-                    📨 کانال روبیکا
-                </a>
-                                <a href="https://rubika.ir/Behrad_dehkordi4" class="contact-btn telegram">
-                    📨 چت در روبیکا
-                                </a>
-                <a href="https://ble.ir/behradwebchanel" class="contact-btn whatsapp">
-                    📱 کانال بله
-                </a>
-                <a href="https://web.bale.ai/profile?uid=203564162" class="contact-btn instagram">
-                    📱 چت در بله
-                </a>
-                <a href="tel:09944233605" class="contact-btn">
-                    📞 تماس تلفنی
-                </a>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <span class="contact-icon">💬</span>
+                    <div class="contact-title">چت در روبیکا</div>
+                    <a href="https://rubika.ir/Behrad_dehkordi4" target="_blank" class="contact-link">
+                        گفتگو کنید
+                    </a>
+                </div>
+                
+                <div class="contact-card">
+                    <span class="contact-icon">📢</span>
+                    <div class="contact-title">کانال روبیکا</div>
+                    <a href="https://rubika.ir/behradweb" target="_blank" class="contact-link">
+                        عضو شوید
+                    </a>
+                </div>
+                
+                <div class="contact-card">
+                    <span class="contact-icon">📣</span>
+                    <div class="contact-title">کانال بله</div>
+                    <a href="https://ble.ir/behradwebchanel" target="_blank" class="contact-link">
+                        عضو شوید
+                    </a>
+                </div>
+                
+                <div class="contact-card">
+                    <span class="contact-icon"></span>
+                    <div class="contact-title">تماس تلفنی</div>
+                    <a href="tel:+989944233605" class="contact-link">
+                        ۰۹۹۴۴۳۳۶۰۵
+                    </a>
+                </div>
             </div>
         </div>
         
         <!-- فوتر -->
         <div class="footer">
-            <p>طراحی شده با ❤️ توسط بهراد دهکردی</p>
+            <p style="font-size: 20px; margin-bottom: 10px;"> طراحی شده با ❤️ توسط بهراد دهکردی</p>
             <p>تمامی حقوق محفوظ است © ۲۰۲۶</p>
+            <p style="margin-top: 15px; opacity: 0.8;">
+                <a href="https://behrad1394.github.io/About-me/" style="color: white; text-decoration: underline;">
+                    behrad1394.github.io/About-me
+                </a>
+            </p>
         </div>
     </div>
 </body>
